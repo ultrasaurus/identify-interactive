@@ -10,8 +10,9 @@
 
       // c.x, c.y, c.x2, c.y2, c.w, c.h
       function jcropSelect(c) {
-        var cloudinary_prefix = "http://res.cloudinary.com/demo/image/fetch/"
-        var cloudinary_params = "w_150,h_150/"
+        var cloudinary_prefix = "http://res.cloudinary.com/demo/image/fetch/";
+        var cloudinary_params = "x_"+ c.x*2 +",y_"+ c.y*2 +
+                                ",w_"+ c.w*2 +",h_"+ c.h*2 +",c_crop/";
         //var source_url = base_url + "%26width=" + 768*2 + "%26height=" + 1024*2 + "%26action=10";
         source_url = "http://identify-interactive.herokuapp.com/botany.jpg";
         var img_url = cloudinary_prefix + cloudinary_params + source_url 
@@ -42,7 +43,9 @@
 
 <body>
 <div id="source">
-  <img src="http://ids.si.edu/ids/deliveryService?max=500&id=http://collections.nmnh.si.edu/search/botany/search.php?irn=10334758%26width=768%26height=1024%26action=10" id="target" />
+  <!--  width="1024" height="1286" -->
+  <img width="512" height="643"
+    src="http://identify-interactive.herokuapp.com/botany.jpg" id="target" />
 </div>
 <div id="action">
   <p>Select the barcode OR <button>I don't see one</button></p>
