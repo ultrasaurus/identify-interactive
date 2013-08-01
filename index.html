@@ -1,0 +1,45 @@
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="jcrop/js/jquery.Jcrop.min.js"></script>
+
+  <link rel="stylesheet" href="jcrop/css/jquery.Jcrop.css" type="text/css" />
+
+  <script language="Javascript">
+
+      // c.x, c.y, c.x2, c.y2, c.w, c.h
+      function jcropSelect(c) {
+        $("#action").append("<p>hello</p>");
+      }
+
+
+      $(document).ready(function() {
+        console.log('document ready');
+        $('#target').Jcrop({
+          onSelect: jcropSelect
+        });
+      });
+  </script>
+
+  <style>
+    #source, #action {
+      float: left;
+      padding: 10px;
+    }
+    .actions {
+    }
+  </style>
+
+    
+  
+</head>
+
+<body>
+<div id="source">
+  <img src="http://ids.si.edu/ids/deliveryService?max=500&id=http://collections.nmnh.si.edu/search/botany/search.php?irn=10334758%26width=768%26height=1024%26action=10" id="target" />
+</div>
+<div id="action">
+  <p>Select the barcode OR <button>I don't see one</button></p>
+</div>
+</body>
+</html>
