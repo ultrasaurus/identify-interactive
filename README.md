@@ -1,10 +1,12 @@
-
 ## Setup
-this should really be a submodule
+this should really be a submodule -- checked it in to run on Heroku, but I think they support submodules now
 git clone https://github.com/tapmodo/Jcrop.git jcrop
 
 
-## Running
+## Hosted
+  http://identify-interactive.herokuapp.com/index.html
+
+## Running locally
 Simple sinatra app that just serves up files in the public directory and includes http auth with name/pass as test/test
 
 run the app with
