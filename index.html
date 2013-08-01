@@ -6,10 +6,16 @@
   <link rel="stylesheet" href="jcrop/css/jquery.Jcrop.css" type="text/css" />
 
   <script language="Javascript">
+      var base_url = "http://ids.si.edu/ids/deliveryService?max=500&id=http://collections.nmnh.si.edu/search/botany/search.php?irn=10334758"
 
       // c.x, c.y, c.x2, c.y2, c.w, c.h
       function jcropSelect(c) {
-        $("#action").append("<p>hello</p>");
+        var cloudinary_prefix = "http://res.cloudinary.com/demo/image/fetch/"
+        var cloudinary_params = "w_150,h_150/"
+        //var source_url = base_url + "%26width=" + 768*2 + "%26height=" + 1024*2 + "%26action=10";
+        source_url = "botany.jpg";
+        var img_url = cloudinary_prefix + cloudinary_params + source_url 
+        $("#action").append("<img src='"+img_url+"'/>");
       }
 
 
