@@ -1,3 +1,6 @@
+
+image credit: (National Museum of Natural History collection)[http://collections.si.edu/search/record/nmnhbotany_10471029]
+
 ## Setup
 this should really be a submodule -- checked it in to run on Heroku, but I think they support submodules now
 git clone https://github.com/tapmodo/Jcrop.git jcrop
